@@ -1,0 +1,20 @@
+name: Deploy frontend to Edgeserver.IO
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  dostuff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Edgeserver Upload
+        uses: lvkdotsh/edgeserver-action@master
+        with:
+          app_id: "125997725584986112"
+          server: https://api.edgeserver.io
+          token: ${{ secrets.EDGETOKEN }}
+          directory: dist

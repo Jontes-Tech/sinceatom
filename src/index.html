@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Days Since Atom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="The Atom text editor is officially dead.">
+  </head>
+  <body class="bg-[#343233]">
+    <div
+      class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
+    >
+      <h1
+        class="mb-4 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl text-[#efdab9]"
+      >
+        It’s Been
+        <span class="text-[#78b0a0]">
+          <span id="d"></span>
+          Days
+        </span>
+        Since Atom Died!
+      </h1>
+      <p
+        class="mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-[#d3c0a5]"
+      >
+        Hmmmm...
+      </p>
+      <div
+        class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+      >
+        <a
+          href="https://github.blog/2022-06-08-sunsetting-atom/"
+          class="inline-block font-medium no-underline rounded text-gray-800 bg-yellow-400 border-[#5px] px-5 py-1"
+        >
+          Learn more
+        </a>
+      </div>
+    </div>
+    <footer class="text-gray-400 fixed bottom-0 rounded opacity-50">
+      Made with ❤️ by Jonte!
+    </footer>
+    <script defer>
+      document.getElementById("d").innerText = Math.ceil(
+        (new Date().getTime() - new Date("12/15/2022").getTime()) / 86400000
+      );
+    </script>
+  </body>
+</html>
